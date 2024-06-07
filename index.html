@@ -23,7 +23,15 @@
 
   <div id="welcomeAlert" class="alert alert-primary text-center" role="alert">
     <script>
-      $("#welcomeAlert").text(document.cookie);
+      var prevTime = document.cookie.match(/(?<=prevTime=\[).+(?=\])/);
+
+      var welcomeText = prevTime
+        ? "Welcome back! Your last visit was " + prevTime
+        : "Welcome to my homepage for the first time!";
+
+      document.cookie = "prevTime=[" + Date() + "]";
+
+      $("#welcomeAlert").text(welcomeText);
     </script>
   </div>
 
