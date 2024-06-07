@@ -80,11 +80,6 @@
     </div>
 
     <div class="container">
-      <div class="text-center">
-      </div>
-    </div>
-
-    <div class="container">
         <div class="col text-center m-2">
           <h1>APIs</h1>
           <i>Public/third-party services generate the contents below and I am not responsible</i>
@@ -123,10 +118,7 @@
           <i>Not an API but I thought it looked better here</i>
           <div id="digit-clock">
             <script>
-              function displayTime() {
-                $("#digit-clock").text(new Date());
-              }
-              setInterval(displayTime, 500);
+              setInterval(() => {$("#digit-clock").text(new Date())}, 500);
             </script>
           </div>
         </div>
@@ -137,7 +129,7 @@
             <script>
               setInterval(() =>
                 {
-                  $.get("https://v2.jokeapi.dev/joke/Programming?type=single", (result) =>
+                  $.get("https://v2.jokeapi.dev/joke/Any", (result) =>
                     {
                       if (result)
                       {
