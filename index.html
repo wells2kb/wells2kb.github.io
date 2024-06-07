@@ -8,6 +8,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://waph-uc.github.io/clock.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
 
     <script src="email.js"></script>
   </head>
@@ -64,7 +65,7 @@
           <h3>Background</h3>
             <ul>
               <li>Embeded C developer for a safety device</li>
-              <li>Developed a novel sensing device for idustriral valves</li>
+              <li>Developed a novel sensing device for industrial valves</li>
             </ul>
         </div>
         <div class="flex-col m-2">
@@ -79,54 +80,85 @@
     </div>
 
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-around">
-        <a href="https://info.flagcounter.com/4qqR"><img src="https://s11.flagcounter.com/count2/4qqR/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter"></a>
-        <canvas id="analog-clock" width="150" height="150" style="background-color:#999">
-          <script>
-            var canvas = $("#analog-clock").get(0);
-            var ctx = canvas.getContext("2d");
-            var radius = canvas.height / 2;
-            ctx.translate(radius, radius);
-            radius = radius * 0.90;
-            setInterval(drawClock, 1000);
-
-            function drawClock()
-            {
-              drawFace(ctx, radius);
-              drawNumbers(ctx, radius);
-              drawTime(ctx, radius);
-            }
-          </script>
-        </canvas>
-        <div id="digit-clock">
-          <script>
-            function displayTime() {
-              $("#digit-clock").text(new Date());
-            }
-            setInterval(displayTime, 500);
-          </script>
-        </div>
-        <div id="joke">
-          <script>
-            setInterval(() =>
-              {
-                $.get("https://v2.jokeapi.dev/joke/Programming?type=single", (result) =>
-                  {
-                    if (result)
-                    {
-                      $("#joke").text("From jokeAPI: " + result.joke);
-                    }
-                  }
-                )
-              }, 60000);
-          </script>
-        </div>
-        <img src="https://cataas.com/cat">
+      <div class="text-center">
       </div>
     </div>
 
     <div class="container">
-      <footer class="fixed-bottom text-center">
+        <div class="col text-center m-2">
+          <h1>APIs</h1>
+          <i>Public/third-party services generate the contents below and I am not responsible</i>
+        </div>
+      <div class="d-flex flex-wrap justify-content-around row-cols-1 row-cols-md-3">
+        <div class="col text-center m-2">
+          <h3>Page Tracker</h3>
+          <a href="https://info.flagcounter.com/4qqR"><img src="https://s11.flagcounter.com/count2/4qqR/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter"></a>
+        </div>
+        <div class="col text-center m-2">
+          <h3>JS Library</h3>
+          <button type="button" class="btn btn-primary" onclick="confetti()">try me!</button>
+        </div>
+        <div class="col text-center m-2">
+          <h3>Analog Clock</h3>
+          <canvas id="analog-clock" width="150" height="150" style="background-color:#999">
+            <script>
+              var canvas = $("#analog-clock").get(0);
+              var ctx = canvas.getContext("2d");
+              var radius = canvas.height / 2;
+              ctx.translate(radius, radius);
+              radius = radius * 0.90;
+              setInterval(drawClock, 1000);
+  
+              function drawClock()
+              {
+                drawFace(ctx, radius);
+                drawNumbers(ctx, radius);
+                drawTime(ctx, radius);
+              }
+            </script>
+          </canvas>
+        </div>
+        <div class="col text-center m-2">
+          <h3>Digital Clock</h3>
+          <i>Not an API but I thought it looked better here</i>
+          <div id="digit-clock">
+            <script>
+              function displayTime() {
+                $("#digit-clock").text(new Date());
+              }
+              setInterval(displayTime, 500);
+            </script>
+          </div>
+        </div>
+        <div class="col text-center m-2">
+          <h3>Joke API</h3>
+          <i>Will take one minute to update</i>
+          <div id="joke">
+            <script>
+              setInterval(() =>
+                {
+                  $.get("https://v2.jokeapi.dev/joke/Programming?type=single", (result) =>
+                    {
+                      if (result)
+                      {
+                        $("#joke").text("From jokeAPI: " + result.joke);
+                      }
+                    }
+                  )
+                }, 60000);
+            </script>
+          </div>
+        </div>
+        <div class="col text-center m-2">
+          <h3>Cat API</h3>
+          <i>A random cat on every refresh!</i>
+          <img src="https://cataas.com/cat" class="img-fluid">
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <footer class="text-center m-4">
         <p>This website was made for a Web App Programing and Hacking class</p>
         <a href="https://wells2kb.github.io/waph.html">
           <button type="button" class="btn">More Info</button>
