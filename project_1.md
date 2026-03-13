@@ -14,7 +14,7 @@ that will wait for you to leave your bag unattended so they can unzip it and go 
 
 ### Half Dome
 
-[](./images/half_dome_front.png)!
+![](./images/half_dome_front.png)
 
 This knick kanck is based on the following photogrammetry mesh: https://sketchfab.com/3d-models/half-dome-yosemite-fc8d0e10bd6149ca83de73274d4a2200.
 Sketchfab seems to have many photogrammetry models that you can https://google.com for.
@@ -23,18 +23,18 @@ I turned the mesh into a cropped solid body and created a model for a portaledge
 A portaledge is a portable ledge that climbers live and sleep on during multi day ascents.
 The portaledge rocks back and forth on the face of Half Dome as you rotate the cube.
 
-[](./images/half_dome_back.png)!
+![](./images/half_dome_back.png)
 
 On the sides you can see the time, weather, and the day night cycle toggle button on the back.
 
-[](./images/half_dome_night.png)!
+![](./images/half_dome_night.png)
 
 Normally, at 7am and 7pm California Time the texture on half dome should swap between day and night.
 Clicking the toggle button with the mouse presses it down and swaps the current day cycle.
 
 ### El Captain
 
-[](./images/el.png)!
+![](./images/el.png)
 
 This knick knack is based on this photogrammetry mesh: https://sketchfab.com/3d-models/el-capitan-ec8286fe454a4912805fbc2d80e3e739.
 I also modified this mesh to look like the other knick knack.
@@ -45,11 +45,11 @@ This is inspired by the legendary "King Swing" that is traditionally done on asc
 I modifed this model: https://www.printables.com/model/312521-the-climber-for-monitor/files for the climber and rope.
 I made the piton model, a piton is relic piece of climbing protection that is basically a nail that is driven into the rock with a hammer.
 
-[](./images/el_back.png)!
+![](./images/el_back.png)
 
 It also has the time, weather, day night cycle, and the toggle button for it.
 
-[](./images/el_night.png)!
+![](./images/el_night.png)
 
 At night El Cap is normally spotted with the light from climbers headlamps.
 I added faint head lamp spots to the night texture for El Cap, but it is a little hard to see them.
